@@ -1,0 +1,78 @@
+// animation
+.hero-section {
+	.typewrite-block {
+		display: block;
+		text-align: center;
+
+		.block {
+			display: inline-block;
+		}
+
+		b {
+			display: none;
+			// width: 140px;
+			overflow: hidden;
+		  border-right: .15em solid #fff;
+		  white-space: nowrap;
+		  text-align: left;
+		  color: #fff;
+		  font-size: 40px;
+		  line-height: 45px;
+		  margin: 0 auto;
+		  letter-spacing: .15em;
+		  animation: 
+		    typing 2s steps(14) 1s 1 normal both,
+		    blink-caret .75s step-end infinite;
+
+		  &.is-visible {
+		  	display: block;
+
+		  	&.end {
+			  	&:first-child {
+			  		border-right: 0;
+			  	}
+		  	}
+
+		  }
+		}
+	}
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff; }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff; }
+}
+
+//button
+.btn {
+	border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  transition: all .3s;
+}

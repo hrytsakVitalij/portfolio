@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1">
+  <title>Portfolio</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/vendors/swiper/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/vendors/fullPage/jquery.fullpage.min.css" >
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+  
+  <!--[if lt IE 10]>
+    <link href="css/ie.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="js/html5/html5.js"></script>
+   	<script type="text/javascript" src="js/mediaqueries/css3-mediaqueries.js"></script>
+  <![endif]-->
+  
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="js/selectivizr/selectivizr-min.js"></script>
+  <![endif]-->
+  
+  <!--[if IE 9]>
+    <script type="text/javascript" src="js/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+  
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/PIE/PIE_IE678.js"></script>
+  <![endif]-->
+  
+  <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper/swiper.min.js"></script>
+  <script type="text/javascript" src="js/fullPage/jquery.fullpage.min.js"></script>
+  <script defer src="js/font-awesome/fontawesome-all.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+<!--[if IE 7]><body class="IE7"><![endif]-->
+<!--[if IE 8]><body class="IE8"><![endif]-->
+<!--[if IE 9]><body class="IE9"><![endif]-->
+<!--[if !IE]>--><body><!--<![endif]-->
+  
+  <!-- header -->
+
+  <header class="header" id="app_header">
+    <div class="container">
+      <div class="inner">
+        <a href="#" class="logo"><img src="img/logo.svg" alt="Logo"></a>
+        <nav class="navigation">
+          <ul id="menu" >
+            <li data-menuanchor="hero"><a href="#hero"></a></li>
+            <li v-for="header_link in header_links" data-menuanchor="{{ header_link }}">
+              <a href="#{{ header_link }}" data-letters="{{ header_link }}">{{ header_link }}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div id="fullpage" v-cloak>
+    <!-- hero section -->
+
+    <section class="section hero-section" id="section0">
+      <div class="container">
+        <h1>Hi, I'm {{ name }}. I design & build</h1>
+        <div class="typewrite-block clearfix">
+          <div class="block">
+            <b class="is-visible">{{ work_sub_title_1 }}</b>
+            <b>{{ work_sub_title_2 }}</b>
+          </div>
+        </div>
+        <div class="page-scroll my-work">
+          <a href="#expertise">
+            Learn more about what I do
+            <button class="btn btn-next"><i class="fa fa-arrow-down"></i></button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- expertise section -->
+
+    <section class="section expertise-section" id="section1">
+      <div class="container">
+        <h2 class="title">
+          {{ expertise_title }}
+        </h2>
+
+        <h3>I've got chops in all phases of the design process.</h3>
+        <div class="row">
+          <div class="col-4 column">
+            <i class="fa fa-lightbulb"></i>
+            <h4 class="title">Ideas</h4>
+            <p class="summary">I collaborate with clients and peers to nurture and transform ideas into well thought out design specs. After all, that's where the majority of amazing user experiences start.</p>
+          </div>
+          <div class="col-4 column">
+            <i class="fa fa-mobile-alt"></i>
+            <h4 class="title">Optimized for all devices</h4>
+            <p class="summary">I'm trying to create a site so that it can fit any device</p>
+          </div>
+          <div class="col-4 column">
+            <i class="fa fa-code"></i>
+            <h4 class="title">Code</h4>
+            <p class="summary">I design in the browser with HTML(5), CSS(3) and  JavaScript. I love coding things from scratch, but I can work with front-end frameworks like Bootstrap too.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- work section -->
+
+    <section class="section work-section" id="section2">
+      <div class="container">
+        <h2 class="title">
+          {{ work_title }}
+        </h2>
+
+        <div class="slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a target="_blank" href="http://www.suitedid.com/" class="visit-link"><i class="fa fa-link"></i>Visit</a>
+                <div class="skill">
+                  <span>HTML(5), CSS3</span>
+                  <span>JavaScript, JQuery</span>
+                  <span>Swiper(Library)</span>
+                  <span>Responsive</span>
+                  <span>Made by WordPress</span>
+                </div>
+                <img src="temp/suited-desk-mob.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="https://www.trovino.it/" class="visit-link"><i class="fa fa-link"></i>Visit</a>
+                <div class="skill">
+                  <span>HTML(5), CSS3</span>
+                  <span>JavaScript, JQuery</span>
+                  <span>Selecter(Library)</span>
+                  <span>Bootstrap, Responsive</span>
+                </div>
+                <img src="temp/trovino-desk-mob.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="https://www.gatekeeperhq.com/" class="visit-link"><i class="fa fa-link"></i>Visit</a>
+                <div class="skill">
+                  <span>HTML(5), CSS3, Sass, HAML</span>
+                  <span>JavaScript, JQuery</span>
+                  <span>Flex, Fontello, Bootstrap</span>
+                  <span>Adaptive Responsive</span>
+                  <span>Made by Ruby on Rails</span>
+                </div>
+                <img src="temp/gk-desk-mob.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="http://ahuzat-hakodesh.co.il/" class="visit-link"><i class="fa fa-link"></i>Visit</a>
+                <div class="skill">
+                  <span>HTML(5), CSS3, Sass</span>
+                  <span>JavaScript, JQuery</span>
+                  <span>Swiper(Library)</span>
+                  <span>Adaptive Responsive</span>
+                  <span>Made by WordPress</span>
+                </div>
+                <img src="temp/ahuzat-desk-mob.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="http://www.hedonistichiking.com/" class="visit-link"><i class="fa fa-link"></i>Visit</a>
+                <div class="skill">
+                  <span>HTML(5), CSS3, Sass</span>
+                  <span>JavaScript, JQuery</span>
+                  <span>Flexslider(Library)</span>
+                  <span>Responsive</span>
+                  <span>Made by Drupal</span>
+                </div>
+                <img src="temp/hh-desk-mob.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="http://euronutrition.ru/" class="visit-link"><i class="fa fa-link"></i>Visit</a>
+                <div class="skill">
+                  <span>HTML(5), CSS3, Sass</span>
+                  <span>JavaScript, JQuery</span>
+                  <span>Swiper(Library)</span>
+                  <span>Responsive</span>
+                  <span>Made by WordPress</span>
+                </div>
+                <img src="temp/nutrition-desk-mob.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="http://www.bobclass.com/" class="visit-link"><i class="fa fa-link"></i>Visit</a>
+                <div class="skill">
+                  <span>HTML(5), CSS3</span>
+                  <span>JavaScript, JQuery</span>
+                  <span>Video player</span>
+                  <span>Responsive</span>
+                  <span>Made by Drupal</span>
+                </div>
+                <img src="temp/bobclass-desk-mob.png" alt="">
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+          </div>
+          <div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+          <div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+
+    <section class="section skills-section" id="section3">
+      <div class="container">
+        <h2 class="title">
+          My skills
+        </h2>
+        <div class="skills-block">
+          <div class="row">
+            <div class="col-3 html">
+              <i class="fab fa-html5"></i>
+              <span class="name">HTML5</span>
+            </div>
+            <div class="col-3 css">
+              <i class="fab fa-css3-alt"></i>
+              <span class="name">CSS3</span>
+            </div>
+            <div class="col-3 js">
+              <i class="fab fa-js-square"></i>
+              <span class="name">JavaScript</span>
+            </div>
+            <div class="col-3 jq">
+              <i class="fab fa-node-js"></i>
+              <span class="name">JQuery</span>
+            </div>
+            <div class="col-3 sass">
+              <i class="fab fa-sass"></i>
+              <span class="name">Sass</span>
+            </div>
+            <div class="col-3 less">
+              <i class="fab fa-less"></i>
+              <span class="name">Less (Learning)</span>
+            </div>
+            <div class="col-3 compass">
+              <i class="fa fa-compass"></i>
+              <span class="name">Compass (Scout)</span>
+            </div>
+            <div class="col-3 haml">
+              <i class="fa fa-code"></i>
+              <span class="name">Haml</span>
+            </div>
+            <div class="col-3 angular">
+              <i class="fab fa-angular"></i>
+              <span class="name">Angular (Learning)</span>
+            </div>
+            <div class="col-3 google">
+              <i class="fab fa-google"></i>
+              <span class="name">Google Map API</span>
+            </div>
+            <div class="col-3 grunt">
+              <i class="fab fa-grunt"></i>
+              <span class="name">Grunt</span>
+            </div>
+            <div class="col-3 gulp">
+              <i class="fab fa-gulp"></i>
+              <span class="name">Gulp</span>
+            </div>
+            <div class="col-12 vue">
+              <i class="fab fa-vuejs"></i>
+              <span class="name">Vue.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app_header',
+      data () {
+        return {
+          header_links: [ 'Expertise', 'Work', 'Skills']
+        }
+      }
+    });
+
+    new Vue({
+      el: '#fullpage',
+      data () {
+        return {
+          name: 'Vitalij',
+          expertise_title: 'My Expertise',
+          work_title: 'My Work',
+          work_sub_title_1: 'landing pages.',
+          work_sub_title_2: 'user interfaces.',
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-plumber": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest"
+  },
+  "dependencies": {
+    "gulp-install": "^1.1.0",
+    "normalize.scss": "^0.1.0"
+  }
+}
